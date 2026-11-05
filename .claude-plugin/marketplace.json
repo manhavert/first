@@ -1,0 +1,11 @@
+{
+  "name": "aplikasi-plugins",
+  "owner": { "name": "Aplikasi" },
+  "plugins": [
+    {
+      "name": "sales-helper",
+      "source": "./plugins/sales-helper",
+      "description": "Bantuan untuk kerja sales Aplikasi"
+    }
+  ]
+}
