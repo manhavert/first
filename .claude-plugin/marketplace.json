@@ -1,11 +1,18 @@
 {
   "name": "aplikasi-plugins",
-  "owner": { "name": "Aplikasi" },
+  "owner": {
+    "name": "Aplikasi"
+  },
   "plugins": [
     {
       "name": "sales-helper",
       "source": "./plugins/sales-helper",
       "description": "Bantuan untuk kerja sales Aplikasi"
+    },
+    {
+      "name": "hermes-skills",
+      "source": "./plugins/hermes-skills",
+      "description": "Skill coding dan produktiviti dari Hermes Agent (NousResearch, MIT)"
     }
   ]
 }
