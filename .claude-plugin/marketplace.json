@@ -13,6 +13,11 @@
       "name": "hermes-skills",
       "source": "./plugins/hermes-skills",
       "description": "Skill coding dan produktiviti dari Hermes Agent (NousResearch, MIT)"
+    },
+    {
+      "name": "taste-skill",
+      "source": "./plugins/taste-skill",
+      "description": "Skill reka bentuk laman web profesional dari Leonxlnx/taste-skill (MIT)"
     }
   ]
 }
