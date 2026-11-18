@@ -58,6 +58,8 @@ Skill daripada [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman)
 | `cavecrew` | Hantar kerja kepada subagent `cavecrew-investigator`, `cavecrew-builder` dan `cavecrew-reviewer` |
 | `investigate-first`, `lean-build`, `surgical-patch`, `safe-refactor`, `migration`, `verify-and-stop` | Corak kerja coding yang tulis kod sesedikit mungkin |
 
+Caveman **tak hidup sendiri**. Taip `/caveman` (atau `/ultracave`, `/megacave`) untuk mula, dan kata "stop caveman" untuk berhenti.
+
 Plugin ini cuma ada bahagian skill. Proxy CLI caveman (jimat token input, Auto, Blocks) dipasang berasingan dengan `npx @caveman-ai/cli@latest`.
 
 ## Cara guna skill
@@ -113,4 +115,4 @@ Untuk tambah ujian baru, buat fail `tests/<nama>.spec.ts`.
 
 Skill dalam `hermes-skills` diadaptasi daripada [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) di bawah lesen MIT. Sebahagiannya berasal daripada [obra/superpowers](https://github.com/obra/superpowers).
 
-Skill dan subagent dalam `caveman` disalin daripada [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (v4.1.0) di bawah lesen Apache-2.0. Lihat `plugins/caveman/LICENSE` dan `NOTICE`. "Caveman" ialah tanda dagangan Julius Brussee.
+Skill dan subagent dalam `caveman` disalin daripada [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (v4.1.0) di bawah lesen Apache-2.0. Satu perubahan kecil: baris `caveman-compress` dibuang dari kad `caveman-help`. Lihat `plugins/caveman/LICENSE` dan `NOTICE`. "Caveman" ialah tanda dagangan Julius Brussee.

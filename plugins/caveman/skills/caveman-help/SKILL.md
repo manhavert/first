@@ -26,7 +26,6 @@ Mode stick until changed or session end.
 |-------|---------|-----------|
 | **caveman-commit** | `/caveman-commit` | Terse commit messages. Conventional Commits. ≤50 char subject. |
 | **caveman-review** | `/caveman-review` | One-line PR comments: `L42: bug: user null. Add guard.` |
-| **caveman-compress** | `/caveman-compress <file>` | Compress .md files to caveman prose. 33.2% fewer tokens on the repo's five test files. |
 | **caveman-help** | `/caveman-help` | This card. |
 
 ## Deactivate
@@ -60,3 +59,5 @@ Resolution: env var > repo config > user config > `caveman`. Legacy values `lite
 ## More
 
 Full docs: https://github.com/JuliusBrussee/caveman
+
+<!-- Modified for manhavert/first: removed the caveman-compress row, since that skill is not included in this plugin. -->
