@@ -59,6 +59,22 @@ plugins/
 3. Untuk plugin baru, tambah entri dalam `.claude-plugin/marketplace.json`.
 4. Dalam Claude, klik **Check for updates** pada marketplace ini.
 
+## Ujian Playwright
+
+Repo ini juga ada ujian pelayar automatik guna [Playwright](https://github.com/microsoft/playwright). Ujian dalam folder `tests/` dijalankan sendiri oleh GitHub Actions setiap kali ada push atau pull request ke `main`.
+
+Untuk jalankan di komputer sendiri (perlu Node.js 20+):
+
+```bash
+npm install
+npx playwright install chromium
+npm test            # jalankan semua ujian
+npm run test:ui     # mod UI interaktif
+npm run report      # buka laporan HTML
+```
+
+Untuk tambah ujian baru, buat fail `tests/<nama>.spec.ts`.
+
 ## Kredit
 
 Skill dalam `hermes-skills` diadaptasi daripada [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) di bawah lesen MIT. Sebahagiannya berasal daripada [obra/superpowers](https://github.com/obra/superpowers).

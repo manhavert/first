@@ -1,0 +1,14 @@
+{
+  "name": "aplikasi-plugins",
+  "private": true,
+  "description": "Marketplace plugin Claude Aplikasi, dengan ujian pelayar Playwright",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^22.0.0"
+  }
+}
