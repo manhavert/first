@@ -43,6 +43,25 @@ MCP server [Playwright](https://github.com/microsoft/playwright-mcp) oleh Micros
 
 Perlu **Node.js 18+** pada komputer anda (server dijalankan dengan `npx @playwright/mcp@latest`).
 
+### caveman
+
+Skill daripada [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman). Claude jawab ringkas tanpa basa-basi, tapi kod, arahan dan mesej ralat kekal tepat.
+
+| Skill | Fungsi |
+|---|---|
+| `caveman` | Gaya ringkas caveman. Kekal hidup sampai anda kata "stop caveman" |
+| `ultracave` | Lebih ringkas lagi: tatabahasa dibuang, fakta sahaja |
+| `megacave` | Gaya Cina Klasik (文言文) |
+| `caveman-commit` | Mesej commit satu baris (Conventional Commit) |
+| `caveman-review` | Semakan kod, satu baris setiap penemuan |
+| `caveman-help` | Kad rujukan semua mod dan arahan |
+| `cavecrew` | Hantar kerja kepada subagent `cavecrew-investigator`, `cavecrew-builder` dan `cavecrew-reviewer` |
+| `investigate-first`, `lean-build`, `surgical-patch`, `safe-refactor`, `migration`, `verify-and-stop` | Corak kerja coding yang tulis kod sesedikit mungkin |
+
+Caveman **tak hidup sendiri**. Taip `/caveman` (atau `/ultracave`, `/megacave`) untuk mula, dan kata "stop caveman" untuk berhenti.
+
+Plugin ini cuma ada bahagian skill. Proxy CLI caveman (jimat token input, Auto, Blocks) dipasang berasingan dengan `npx @caveman-ai/cli@latest`.
+
 ## Cara guna skill
 
 - **Automatik:** Claude akan guna skill yang sesuai berdasarkan permintaan anda.
@@ -60,9 +79,13 @@ plugins/
 ├── hermes-skills/
 │   ├── .claude-plugin/plugin.json
 │   └── skills/<nama-skill>/SKILL.md
-└── playwright/
+├── playwright/
+│   ├── .claude-plugin/plugin.json
+│   └── .mcp.json             # Konfigurasi MCP server Playwright
+└── caveman/
     ├── .claude-plugin/plugin.json
-    └── .mcp.json             # Konfigurasi MCP server Playwright
+    ├── skills/<nama-skill>/SKILL.md
+    └── agents/cavecrew-*.md  # Subagent cavecrew
 ```
 
 ## Tambah skill baru
@@ -91,3 +114,5 @@ Untuk tambah ujian baru, buat fail `tests/<nama>.spec.ts`.
 ## Kredit
 
 Skill dalam `hermes-skills` diadaptasi daripada [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) di bawah lesen MIT. Sebahagiannya berasal daripada [obra/superpowers](https://github.com/obra/superpowers).
+
+Skill dan subagent dalam `caveman` disalin daripada [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (v4.1.0) di bawah lesen Apache-2.0. Satu perubahan kecil: baris `caveman-compress` dibuang dari kad `caveman-help`. Lihat `plugins/caveman/LICENSE` dan `NOTICE`. "Caveman" ialah tanda dagangan Julius Brussee.

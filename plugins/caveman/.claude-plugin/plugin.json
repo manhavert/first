@@ -1,0 +1,11 @@
+{
+  "name": "caveman",
+  "version": "4.1.0",
+  "description": "Terse caveman voice and lean coding work patterns: shorter answers, code kept exact (skills from JuliusBrussee/caveman, Apache-2.0)",
+  "author": {
+    "name": "Julius Brussee",
+    "url": "https://github.com/JuliusBrussee"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/JuliusBrussee/caveman"
+}
