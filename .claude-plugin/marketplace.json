@@ -18,6 +18,11 @@
       "name": "taste-skill",
       "source": "./plugins/taste-skill",
       "description": "Skill reka bentuk laman web profesional dari Leonxlnx/taste-skill (MIT)"
+    },
+    {
+      "name": "playwright",
+      "source": "./plugins/playwright",
+      "description": "Automasi pelayar melalui Playwright MCP server dari microsoft/playwright-mcp (Apache-2.0)"
     }
   ]
 }
