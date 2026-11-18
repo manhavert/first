@@ -33,6 +33,16 @@ Skill yang disesuaikan daripada [Hermes Agent](https://github.com/NousResearch/h
 | `meeting-action-items` | Tukar nota meeting kepada keputusan, pemilik tugas, tarikh akhir dan draf follow-up |
 | `weekly-review-planning` | Semakan mingguan: komitmen, kerja tergendala dan perancangan minggu depan |
 
+### playwright
+
+MCP server [Playwright](https://github.com/microsoft/playwright-mcp) oleh Microsoft. Claude boleh buka laman web, klik, isi borang dan ambil tangkapan skrin dalam pelayar sebenar.
+
+| Tool | Fungsi |
+|---|---|
+| `playwright` (MCP) | Automasi pelayar: navigasi, klik, taip, snapshot halaman, tangkapan skrin |
+
+Perlu **Node.js 18+** pada komputer anda (server dijalankan dengan `npx @playwright/mcp@latest`).
+
 ## Cara guna skill
 
 - **Automatik:** Claude akan guna skill yang sesuai berdasarkan permintaan anda.
@@ -47,9 +57,12 @@ plugins/
 ├── sales-helper/
 │   ├── .claude-plugin/plugin.json
 │   └── skills/<nama-skill>/SKILL.md
-└── hermes-skills/
+├── hermes-skills/
+│   ├── .claude-plugin/plugin.json
+│   └── skills/<nama-skill>/SKILL.md
+└── playwright/
     ├── .claude-plugin/plugin.json
-    └── skills/<nama-skill>/SKILL.md
+    └── .mcp.json             # Konfigurasi MCP server Playwright
 ```
 
 ## Tambah skill baru
