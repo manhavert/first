@@ -22,7 +22,7 @@
     {
       "name": "playwright",
       "source": "./plugins/playwright",
-      "description": "Automasi pelayar melalui Playwright MCP server dari microsoft/playwright-mcp (Apache-2.0)"
+      "description": "Automasi pelayar Playwright: skill playwright-cli dan MCP server dari Microsoft (Apache-2.0)"
     },
     {
       "name": "caveman",

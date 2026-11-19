@@ -35,13 +35,20 @@ Skill yang disesuaikan daripada [Hermes Agent](https://github.com/NousResearch/h
 
 ### playwright
 
-MCP server [Playwright](https://github.com/microsoft/playwright-mcp) oleh Microsoft. Claude boleh buka laman web, klik, isi borang dan ambil tangkapan skrin dalam pelayar sebenar.
+Automasi pelayar [Playwright](https://playwright.dev) oleh Microsoft. Claude boleh buka laman web, klik, isi borang, ambil tangkapan skrin dan tulis ujian Playwright.
 
-| Tool | Fungsi |
+| Skill / Tool | Fungsi |
 |---|---|
-| `playwright` (MCP) | Automasi pelayar: navigasi, klik, taip, snapshot halaman, tangkapan skrin |
+| `playwright-cli` (skill) | Kawal pelayar melalui arahan `playwright-cli`: navigasi, klik, taip, snapshot, rakaman video, trace, mock request, jana ujian. Lebih jimat token. Dari [microsoft/playwright-cli](https://github.com/microsoft/playwright-cli) |
+| `playwright` (MCP) | Automasi pelayar melalui MCP server. Dari [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) |
 
-Perlu **Node.js 18+** pada komputer anda (server dijalankan dengan `npx @playwright/mcp@latest`).
+Perlu **Node.js 20+** pada komputer anda. Untuk skill `playwright-cli`, pasang CLI sekali:
+
+```bash
+npm install -g @playwright/cli@latest
+```
+
+MCP server pula dijalankan sendiri dengan `npx @playwright/mcp@latest`.
 
 ### caveman
 
@@ -81,7 +88,8 @@ plugins/
 │   └── skills/<nama-skill>/SKILL.md
 ├── playwright/
 │   ├── .claude-plugin/plugin.json
-│   └── .mcp.json             # Konfigurasi MCP server Playwright
+│   ├── .mcp.json             # Konfigurasi MCP server Playwright
+│   └── skills/playwright-cli/SKILL.md
 └── caveman/
     ├── .claude-plugin/plugin.json
     ├── skills/<nama-skill>/SKILL.md
@@ -116,3 +124,5 @@ Untuk tambah ujian baru, buat fail `tests/<nama>.spec.ts`.
 Skill dalam `hermes-skills` diadaptasi daripada [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) di bawah lesen MIT. Sebahagiannya berasal daripada [obra/superpowers](https://github.com/obra/superpowers).
 
 Skill dan subagent dalam `caveman` disalin daripada [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (v4.1.0) di bawah lesen Apache-2.0. Satu perubahan kecil: baris `caveman-compress` dibuang dari kad `caveman-help`. Lihat `plugins/caveman/LICENSE` dan `NOTICE`. "Caveman" ialah tanda dagangan Julius Brussee.
+
+Skill `playwright-cli` dalam plugin `playwright` disalin tanpa perubahan daripada [microsoft/playwright-cli](https://github.com/microsoft/playwright-cli) (v0.1.25) di bawah lesen Apache-2.0. Lihat `plugins/playwright/LICENSE`.

@@ -1,7 +1,7 @@
 {
   "name": "playwright",
-  "version": "1.0.0",
-  "description": "Browser automation through the Playwright MCP server (from microsoft/playwright-mcp, Apache-2.0)",
+  "version": "1.1.0",
+  "description": "Browser automation with Playwright: the playwright-cli skill (microsoft/playwright-cli) and the Playwright MCP server (microsoft/playwright-mcp), both Apache-2.0",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/microsoft/playwright-mcp"
+  "homepage": "https://github.com/microsoft/playwright-cli"
 }
