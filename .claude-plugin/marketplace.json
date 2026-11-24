@@ -28,6 +28,11 @@
       "name": "caveman",
       "source": "./plugins/caveman",
       "description": "Gaya jawapan ringkas caveman dan corak kerja coding yang jimat token dari JuliusBrussee/caveman (Apache-2.0)"
+    },
+    {
+      "name": "rea",
+      "source": "./plugins/rea",
+      "description": "Reverse engineering dengan agen: skill reverse-engineer-anything dan MCP server REA dari morluto/rea (MIT)"
     }
   ]
 }

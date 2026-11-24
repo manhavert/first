@@ -1,0 +1,7 @@
+{
+  "name": "rea",
+  "version": "1.0.0",
+  "description": "Reverse engineering with agents: the reverse-engineer-anything skill and the REA MCP server (rea-agents 6.10.1) from morluto/rea, MIT",
+  "license": "MIT",
+  "homepage": "https://github.com/morluto/rea"
+}
