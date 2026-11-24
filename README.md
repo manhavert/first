@@ -69,6 +69,17 @@ Caveman **tak hidup sendiri**. Taip `/caveman` (atau `/ultracave`, `/megacave`) 
 
 Plugin ini cuma ada bahagian skill. Proxy CLI caveman (jimat token input, Auto, Blocks) dipasang berasingan dengan `npx @caveman-ai/cli@latest`.
 
+### rea
+
+[REA: Reverse Engineer Anything](https://github.com/morluto/rea) oleh morluto. Claude boleh periksa aplikasi tanpa kod sumber (binari native, aplikasi JavaScript/Electron, .NET, Android, firmware, laman web), terangkan cara sesuatu ciri berfungsi berserta bukti, dan bantu bina versi sendiri.
+
+| Skill / Tool | Fungsi |
+|---|---|
+| `reverse-engineer-anything` (skill) | Panduan siasatan REA: pilih alat, kumpul bukti, decompile, banding versi, bina persekitaran agen |
+| `rea` (MCP) | Alat analisis REA melalui MCP server, dijalankan dengan `npx -y rea-agents@6.10.1 mcp` |
+
+Perlu **Node.js** dan npm pada komputer anda. Analisis JavaScript statik tak perlu enjin lain; untuk analisis binari native, pasang salah satu: Hopper, Ghidra, IDA atau Kuna. Analisis berjalan di komputer sendiri. Guna REA hanya untuk perisian yang anda miliki atau dibenarkan untuk dianalisis.
+
 ## Cara guna skill
 
 - **Automatik:** Claude akan guna skill yang sesuai berdasarkan permintaan anda.
@@ -90,10 +101,14 @@ plugins/
 │   ├── .claude-plugin/plugin.json
 │   ├── .mcp.json             # Konfigurasi MCP server Playwright
 │   └── skills/playwright-cli/SKILL.md
-└── caveman/
+├── caveman/
+│   ├── .claude-plugin/plugin.json
+│   ├── skills/<nama-skill>/SKILL.md
+│   └── agents/cavecrew-*.md  # Subagent cavecrew
+└── rea/
     ├── .claude-plugin/plugin.json
-    ├── skills/<nama-skill>/SKILL.md
-    └── agents/cavecrew-*.md  # Subagent cavecrew
+    ├── .mcp.json             # Konfigurasi MCP server REA
+    └── skills/reverse-engineer-anything/
 ```
 
 ## Tambah skill baru
@@ -126,3 +141,5 @@ Skill dalam `hermes-skills` diadaptasi daripada [NousResearch/hermes-agent](http
 Skill dan subagent dalam `caveman` disalin daripada [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (v4.1.0) di bawah lesen Apache-2.0. Satu perubahan kecil: baris `caveman-compress` dibuang dari kad `caveman-help`. Lihat `plugins/caveman/LICENSE` dan `NOTICE`. "Caveman" ialah tanda dagangan Julius Brussee.
 
 Skill `playwright-cli` dalam plugin `playwright` disalin tanpa perubahan daripada [microsoft/playwright-cli](https://github.com/microsoft/playwright-cli) (v0.1.25) di bawah lesen Apache-2.0. Lihat `plugins/playwright/LICENSE`.
+
+Skill `reverse-engineer-anything` dalam plugin `rea` disalin tanpa perubahan daripada [morluto/rea](https://github.com/morluto/rea) (v6.10.1, skill versi 63) di bawah lesen MIT. MCP server dijalankan terus daripada pakej npm rasmi `rea-agents`. Lihat `plugins/rea/LICENSE`.
