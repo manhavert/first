@@ -33,6 +33,11 @@
       "name": "rea",
       "source": "./plugins/rea",
       "description": "Reverse engineering dengan agen: skill reverse-engineer-anything dan MCP server REA dari morluto/rea (MIT)"
+    },
+    {
+      "name": "mengto-3d",
+      "source": "./plugins/mengto-3d",
+      "description": "Skill 3D Three.js dari MengTo/Skills: 3d-feature-objects, objek 3D dalam kad ciri yang berpusing bila hover (MIT)"
     }
   ]
 }

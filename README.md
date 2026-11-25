@@ -80,6 +80,14 @@ Plugin ini cuma ada bahagian skill. Proxy CLI caveman (jimat token input, Auto, 
 
 Perlu **Node.js** dan npm pada komputer anda. Analisis JavaScript statik tak perlu enjin lain; untuk analisis binari native, pasang salah satu: Hopper, Ghidra, IDA atau Kuna. Analisis berjalan di komputer sendiri. Guna REA hanya untuk perisian yang anda miliki atau dibenarkan untuk dianalisis.
 
+### mengto-3d
+
+Skill 3D untuk laman web Three.js daripada [MengTo/Skills](https://github.com/MengTo/Skills) oleh Meng To.
+
+| Skill | Fungsi |
+|---|---|
+| `3d-feature-objects` | Bina grid kad ciri dengan objek 3D bercahaya yang berpusing bila hover dan kembali ke pose asal. Ada demo dalam `demo/index.html` |
+
 ## Cara guna skill
 
 - **Automatik:** Claude akan guna skill yang sesuai berdasarkan permintaan anda.
@@ -105,10 +113,13 @@ plugins/
 │   ├── .claude-plugin/plugin.json
 │   ├── skills/<nama-skill>/SKILL.md
 │   └── agents/cavecrew-*.md  # Subagent cavecrew
-└── rea/
+├── rea/
+│   ├── .claude-plugin/plugin.json
+│   ├── .mcp.json             # Konfigurasi MCP server REA
+│   └── skills/reverse-engineer-anything/
+└── mengto-3d/
     ├── .claude-plugin/plugin.json
-    ├── .mcp.json             # Konfigurasi MCP server REA
-    └── skills/reverse-engineer-anything/
+    └── skills/3d-feature-objects/   # SKILL.md + demo/
 ```
 
 ## Tambah skill baru
@@ -143,3 +154,5 @@ Skill dan subagent dalam `caveman` disalin daripada [JuliusBrussee/caveman](http
 Skill `playwright-cli` dalam plugin `playwright` disalin tanpa perubahan daripada [microsoft/playwright-cli](https://github.com/microsoft/playwright-cli) (v0.1.25) di bawah lesen Apache-2.0. Lihat `plugins/playwright/LICENSE`.
 
 Skill `reverse-engineer-anything` dalam plugin `rea` disalin tanpa perubahan daripada [morluto/rea](https://github.com/morluto/rea) (v6.10.1, skill versi 63) di bawah lesen MIT. MCP server dijalankan terus daripada pakej npm rasmi `rea-agents`. Lihat `plugins/rea/LICENSE`.
+
+Skill `3d-feature-objects` dalam plugin `mengto-3d` disalin tanpa perubahan daripada [MengTo/Skills](https://github.com/MengTo/Skills) di bawah lesen MIT, berserta demo dan salinan Three.js (MIT). Lihat `plugins/mengto-3d/LICENSE` dan `demo/assets/Three-LICENSE.txt`.
