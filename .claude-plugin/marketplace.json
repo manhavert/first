@@ -42,7 +42,7 @@
     {
       "name": "blender-rigging",
       "source": "./plugins/blender-rigging",
-      "description": "Skill rigging dan animasi watak Blender: Rigify, weight paint, rig muka, dan tukar animasi Mixamo ke rig sendiri (scenario-labs MIT, terminalskills Apache-2.0)"
+      "description": "Skill watak 3D Blender: rigging Rigify, animasi, sculpt, rambut, tekstur, lampu dan render, retopo, previs, eksport ke Three.js, dan tukar animasi Mixamo ke rig sendiri (scenario-labs MIT, terminalskills Apache-2.0)"
     }
   ]
 }
