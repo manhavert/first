@@ -90,15 +90,23 @@ Skill 3D untuk laman web Three.js daripada [MengTo/Skills](https://github.com/Me
 
 ### blender-rigging
 
-Skill untuk rig dan animasi watak dalam Blender (contohnya watak 3D Jang). Mixamo tiada API rasmi, jadi fail FBX Mixamo perlu dimuat turun sendiri dari mixamo.com dahulu.
+Skill untuk watak 3D dalam Blender (contohnya Jang): bentuk, rig, animasi, render dan eksport. Mixamo tiada API rasmi, jadi fail FBX Mixamo perlu dimuat turun sendiri dari mixamo.com dahulu.
 
 | Skill | Fungsi |
 |---|---|
-| `scenario-blender-rigging` | Rig watak dengan Rigify: susun metarig, jana rig, weight paint, IK/FK, rig muka, shape key ARKit dan viseme untuk lip sync, serta uji deformasi. Ada modul Python `scripts/bx_rig.py` |
-| `scenario-blender-expert` | Asas wajib untuk skill rigging: cara jalankan kod Blender, semak hasil, dan perubahan API Blender 5.2 |
-| `blender-motion-capture` | Import animasi BVH/FBX (termasuk Mixamo), tukar (retarget) animasi ke rig sendiri guna peta nama tulang, bersihkan data mocap dan eksport |
+| `scenario-blender-expert` | Asas wajib untuk semua skill scenario: cara jalankan kod Blender, semak hasil, dan perubahan API Blender 5.2 |
+| `scenario-blender-rigging` | Rig watak dengan Rigify: metarig, jana rig, weight paint, IK/FK, rig muka, shape key ARKit dan viseme untuk lip sync |
+| `scenario-blender-animation` | Animasi watak: kitaran jalan dan lari, lompat, lakonan, lip sync, mata dan muka, timing dan spacing |
+| `scenario-blender-sculpting` | Sculpt kepala, muka dan watak kartun atau realistik |
+| `scenario-blender-hair` | Rambut dan bulu guna hair curves, termasuk rambut kerinting |
+| `scenario-blender-texturing-shading` | Bahan dan tekstur PBR, kulit watak bergaya, kotoran dan kesan haus |
+| `scenario-blender-retopology` | Tukar model padat, imbasan atau model AI kepada topologi bersih untuk animasi |
+| `scenario-blender-lighting-rendering` | Lampu, HDRI, tetapan EEVEE atau Cycles, dan baiki render yang rata atau bising |
+| `scenario-blender-previs-storyboard` | Tukar skrip kepada senarai shot, sudut kamera, storyboard dan animatik |
+| `scenario-blender-export` | Eksport ke GLB/glTF untuk Three.js, FBX, USD dan lain-lain, serta baiki skala atau animasi yang rosak selepas eksport |
+| `blender-motion-capture` | Import animasi BVH/FBX (termasuk Mixamo), retarget ke rig sendiri guna peta nama tulang, bersihkan data mocap dan eksport |
 
-Perlu Blender 5.x. Skill ini berfungsi dengan alat Blender Lab yang disambungkan ke Claude.
+Perlu Blender 5.x. Skill ini berfungsi dengan alat Blender Lab yang disambungkan ke Claude. Skill scenario lain (uv-baking, blockout, geometry-nodes, hard-surface, grease-pencil) tidak dimasukkan; tambah dari [scenario-labs/skills](https://github.com/scenario-labs/skills) jika perlu.
 
 ## Cara guna skill
 
@@ -135,8 +143,7 @@ plugins/
 └── blender-rigging/
     ├── .claude-plugin/plugin.json
     └── skills/
-        ├── scenario-blender-rigging/   # SKILL.md + references/ + scripts/bx_rig.py
-        ├── scenario-blender-expert/
+        ├── scenario-blender-<nama>/   # 10 skill: SKILL.md + references/ + scripts/bx_*.py
         └── blender-motion-capture/
 ```
 
@@ -175,4 +182,4 @@ Skill `reverse-engineer-anything` dalam plugin `rea` disalin tanpa perubahan dar
 
 Skill `3d-feature-objects` dalam plugin `mengto-3d` disalin tanpa perubahan daripada [MengTo/Skills](https://github.com/MengTo/Skills) di bawah lesen MIT, berserta demo dan salinan Three.js (MIT). Lihat `plugins/mengto-3d/LICENSE` dan `demo/assets/Three-LICENSE.txt`.
 
-Skill `scenario-blender-rigging` dan `scenario-blender-expert` dalam plugin `blender-rigging` disalin tanpa perubahan daripada [scenario-labs/skills](https://github.com/scenario-labs/skills) (commit 3c4d18c) di bawah lesen MIT. Skill `blender-motion-capture` disalin tanpa perubahan daripada [terminalskills/skills](https://github.com/terminalskills/skills) (commit 4228905) di bawah lesen Apache-2.0. Lihat `plugins/blender-rigging/LICENSE-scenario-MIT` dan `LICENSE-terminalskills-Apache-2.0`.
+10 skill `scenario-blender-*` (expert, rigging, animation, export, sculpting, lighting-rendering, texturing-shading, hair, retopology, previs-storyboard) dalam plugin `blender-rigging` disalin tanpa perubahan daripada [scenario-labs/skills](https://github.com/scenario-labs/skills) (commit 3c4d18c) di bawah lesen MIT. Skill `blender-motion-capture` disalin tanpa perubahan daripada [terminalskills/skills](https://github.com/terminalskills/skills) (commit 4228905) di bawah lesen Apache-2.0. Lihat `plugins/blender-rigging/LICENSE-scenario-MIT` dan `LICENSE-terminalskills-Apache-2.0`.
