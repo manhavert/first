@@ -38,6 +38,11 @@
       "name": "mengto-3d",
       "source": "./plugins/mengto-3d",
       "description": "Skill 3D Three.js dari MengTo/Skills: 3d-feature-objects, objek 3D dalam kad ciri yang berpusing bila hover (MIT)"
+    },
+    {
+      "name": "blender-rigging",
+      "source": "./plugins/blender-rigging",
+      "description": "Skill rigging dan animasi watak Blender: Rigify, weight paint, rig muka, dan tukar animasi Mixamo ke rig sendiri (scenario-labs MIT, terminalskills Apache-2.0)"
     }
   ]
 }
