@@ -88,6 +88,18 @@ Skill 3D untuk laman web Three.js daripada [MengTo/Skills](https://github.com/Me
 |---|---|
 | `3d-feature-objects` | Bina grid kad ciri dengan objek 3D bercahaya yang berpusing bila hover dan kembali ke pose asal. Ada demo dalam `demo/index.html` |
 
+### blender-rigging
+
+Skill untuk rig dan animasi watak dalam Blender (contohnya watak 3D Jang). Mixamo tiada API rasmi, jadi fail FBX Mixamo perlu dimuat turun sendiri dari mixamo.com dahulu.
+
+| Skill | Fungsi |
+|---|---|
+| `scenario-blender-rigging` | Rig watak dengan Rigify: susun metarig, jana rig, weight paint, IK/FK, rig muka, shape key ARKit dan viseme untuk lip sync, serta uji deformasi. Ada modul Python `scripts/bx_rig.py` |
+| `scenario-blender-expert` | Asas wajib untuk skill rigging: cara jalankan kod Blender, semak hasil, dan perubahan API Blender 5.2 |
+| `blender-motion-capture` | Import animasi BVH/FBX (termasuk Mixamo), tukar (retarget) animasi ke rig sendiri guna peta nama tulang, bersihkan data mocap dan eksport |
+
+Perlu Blender 5.x. Skill ini berfungsi dengan alat Blender Lab yang disambungkan ke Claude.
+
 ## Cara guna skill
 
 - **Automatik:** Claude akan guna skill yang sesuai berdasarkan permintaan anda.
@@ -117,9 +129,15 @@ plugins/
 │   ├── .claude-plugin/plugin.json
 │   ├── .mcp.json             # Konfigurasi MCP server REA
 │   └── skills/reverse-engineer-anything/
-└── mengto-3d/
+├── mengto-3d/
+│   ├── .claude-plugin/plugin.json
+│   └── skills/3d-feature-objects/   # SKILL.md + demo/
+└── blender-rigging/
     ├── .claude-plugin/plugin.json
-    └── skills/3d-feature-objects/   # SKILL.md + demo/
+    └── skills/
+        ├── scenario-blender-rigging/   # SKILL.md + references/ + scripts/bx_rig.py
+        ├── scenario-blender-expert/
+        └── blender-motion-capture/
 ```
 
 ## Tambah skill baru
@@ -156,3 +174,5 @@ Skill `playwright-cli` dalam plugin `playwright` disalin tanpa perubahan daripad
 Skill `reverse-engineer-anything` dalam plugin `rea` disalin tanpa perubahan daripada [morluto/rea](https://github.com/morluto/rea) (v6.10.1, skill versi 63) di bawah lesen MIT. MCP server dijalankan terus daripada pakej npm rasmi `rea-agents`. Lihat `plugins/rea/LICENSE`.
 
 Skill `3d-feature-objects` dalam plugin `mengto-3d` disalin tanpa perubahan daripada [MengTo/Skills](https://github.com/MengTo/Skills) di bawah lesen MIT, berserta demo dan salinan Three.js (MIT). Lihat `plugins/mengto-3d/LICENSE` dan `demo/assets/Three-LICENSE.txt`.
+
+Skill `scenario-blender-rigging` dan `scenario-blender-expert` dalam plugin `blender-rigging` disalin tanpa perubahan daripada [scenario-labs/skills](https://github.com/scenario-labs/skills) (commit 3c4d18c) di bawah lesen MIT. Skill `blender-motion-capture` disalin tanpa perubahan daripada [terminalskills/skills](https://github.com/terminalskills/skills) (commit 4228905) di bawah lesen Apache-2.0. Lihat `plugins/blender-rigging/LICENSE-scenario-MIT` dan `LICENSE-terminalskills-Apache-2.0`.

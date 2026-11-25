@@ -1,0 +1,7 @@
+{
+  "name": "blender-rigging",
+  "version": "1.0.0",
+  "description": "Blender character rigging and animation skills: scenario-blender-rigging (Rigify, weights, face rigs) and scenario-blender-expert from scenario-labs/skills (MIT), plus blender-motion-capture (Mixamo/BVH/FBX retargeting) from terminalskills/skills (Apache-2.0)",
+  "license": "MIT AND Apache-2.0",
+  "homepage": "https://github.com/scenario-labs/skills"
+}
